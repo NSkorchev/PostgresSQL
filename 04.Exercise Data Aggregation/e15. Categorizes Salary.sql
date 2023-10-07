@@ -3,7 +3,7 @@ SELECT
 	CASE
 		WHEN AVG(salary) > 45800 THEN 'Good'
 		WHEN AVG(salary) BETWEEN 27500 AND 45800 THEN 'Medium'
-		WHEN AVG(salary) < 27500 THEN 'Needs Improvement'
+		WHEN AVG(salary) < 27500 THEN 'Need Improvement'
 	END AS "Category"	
 FROM
 	employees
