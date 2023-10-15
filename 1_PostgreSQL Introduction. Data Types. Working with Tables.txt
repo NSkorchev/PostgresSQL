@@ -1,0 +1,54 @@
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Nikol@!88" -p 1433:1433 --name MSSQLServer -d mcr.microsoft.com/mssql/server
+
+Username: aes.creator
+Current password: dto^QRqYK/82
+
+docker run -p 5432:5432 -e POSTGRES_USER=pgadmin -e POSTGRES_PASSWORD=Nikolai88 -d -v my-postgres-data:/var/lib/postgresql/data --name pgdb postgres:latest
+docker run -p 5050:80 -e PGADMIN_DEFAULT_EMAIL=nikolay.skorchev@gmail.com -e PGADMIN_DEFAULT_PASSWORD=Nikolai88 -v my-data:/var/lib/pgadmin -d dpage/pgadmin4
+
+-- -- CREATE TABLE
+-- -- 	employees(
+-- -- 		id SERIAL PRIMARY KEY NOT NULL,
+-- -- 		first_name VARCHAR(30),
+-- -- 		last_name VARCHAR(50),
+-- -- 		hiring_date DATE DEFAULT '2023-01-01',
+-- -- 		salary NUMERIC(10, 2),
+-- -- 		devices_number int
+-- -- 	);
+	
+-- -- CREATE TABLE
+-- -- 	departments(
+-- -- 		id SERIAL PRIMARY KEY NOT NULL,
+-- -- 		name VARCHAR(50),
+-- -- 		code CHAR(3),
+-- -- 		description TEXT
+-- -- 	);
+	
+-- -- CREATE TABLE
+-- -- 	issues(
+-- -- 		id SERIAL PRIMARY KEY UNIQUE,
+-- -- 		description VARCHAR(150),
+-- -- 		date DATE, 
+-- -- 		start timestamp
+-- -- 	);
+
+-- ALTER TABLE
+-- 	employees
+-- 	 RENAME COLUMN device_number TO devices_number;
+
+-- ALTER TABLE employees
+-- ADD COLUMN middle_name VARCHAR(50);
+
+-- ALTER TABLE employees
+-- ALTER COLUMN salary SET not null,
+-- ALTER COLUMN salary SET DEFAULT 0,
+-- ALTER COLUMN hiring_date SET not null;
+
+-- ALTER TABLE employees
+-- -- ADD COLUMN middle_name VARCHAR(50),
+-- ALTER COLUMN middle_name TYPE VARCHAR(100);
+
+-- TRUNCATE TABLE issues;
+
+-- DROP TABLE departments;
+
